@@ -14,17 +14,19 @@ data/row ->loader->cleaner->analyser->exporter->summarizer->agent_context.txt
 ## Structure
 
 agent-data-prep/
- |----src/
- | |---loader.py # Chargement et inspection des CSV
-   |---cleaner.py # Nettoyage:valeurs manquantes,doublons,types
-   |---analyzer.py # Analyses:groupby,pivot_table_agrégations
-   |---exporter.py # Export CSV des données nettoyées et analyses
-   |---summarizer.py # Génération du résumé pour un agent LLM
- |---data/
-   |---raw/ # Données brutes (non versionnées)
-   |---clean # Données nettoyées (non versionnées)
- |---main.py
- |---README.md
+│
+├── src/
+│   ├── loader.py        # Chargement et inspection des CSV
+│   ├── cleaner.py       # Nettoyage : valeurs manquantes, doublons, types
+│   ├── analyzer.py      # Analyses : groupby, pivot_table, agrégations
+│   ├── exporter.py      # Export des résultats
+│   └── summarizer.py    # Résumé destiné à un agent LLM
+│
+├── data/
+│   ├── raw/            # Données brutes 
+│   └── clean/          # Données nettoyées 
+├── main.py
+└── README.md
 
 ## Dataset
 [E-Commerce Product Intelligence Dataser](https://www.kaggle.com/datasets/anujsaha0123456789/e-commerce-product-intelligence-dataset) - Kaggle (MIT License)
